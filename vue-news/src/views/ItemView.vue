@@ -20,7 +20,7 @@
 <script>
 import { mapGetters } from "vuex";
 import UserProfile from "../components/UserProfile.vue";
-import bus from "../utils/bus.js";
+import bus from "../utils/bus";
 
 export default {
 	components: {
@@ -30,7 +30,14 @@ export default {
 		bus.$emit("off:progress");
 	},
 	computed: {
-		...mapGetters(["fetchedItem", "userName", "userTimeAgo", "userQuestion", "userContent", "contentPoints"]),
+		...mapGetters([
+			"fetchedItem",
+			"userName",
+			"userTimeAgo",
+			"userQuestion",
+			"userContent",
+			"contentPoints",
+		]),
 	},
 };
 </script>

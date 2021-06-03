@@ -3,8 +3,16 @@ module.exports = {
 	env: {
 		node: true,
 	},
-	extends: ["plugin:vue/essential", "eslint:recommended", "@vue/typescript/recommended", "@vue/prettier", "@vue/prettier/@typescript-eslint"],
+	extends: [
+		"plugin:vue/essential",
+		"eslint:recommended",
+		"@vue/typescript/recommended",
+		"@vue/prettier",
+		"@vue/prettier/@typescript-eslint",
+	],
+	plugins: ["@typescript-eslint"],
 	parserOptions: {
+		parser: "@typescript-eslint/parser",
 		ecmaVersion: 2020,
 	},
 	rules: {
@@ -21,7 +29,7 @@ module.exports = {
 				useTabs: true,
 				tabWidth: 2,
 				trailingComma: "all",
-				printWidth: 150,
+				printWidth: 100,
 				bracketSpacing: true,
 				arrowParens: "avoid",
 			},
